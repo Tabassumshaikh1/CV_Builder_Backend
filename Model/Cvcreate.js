@@ -1,125 +1,69 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 const CvSchema = mongoose.Schema({
-  address:{
-    type:String
+  address: {
+    type: String,
+    required: true
   },
-  city:{
-    type:String
+  city: {
+    type: String,
+    required: true
   },
-  clgfromdate:{
-    type:String
+  email: {
+    type: String,
+    required: true
   },
-  clgtodate:{
-    type:String
+ firstname: {
+    type: String,
+    required: true
   },
-  collegename:{
-    type:String
-  },
-  current_ctc:{
-    type:String
-  },
-  current_position:{
-    type:String
-  }
-,
-degree:{
-  type:String
-},
-email:{
-  type:String
-},
-expected_ctc:{
-  type:String
-},
- 
-firstname:{
-  type:String
-},
-id:{
-  type:String
-},
-joining_date:{
-  type:String
-},
-joining_location:{
-  type:String
-},
- 
-  lastname:{
-    type:String
-  },
-
-  leaving_date:{
-    type:String
+  uid: {
+    type: String,
+    required: true
   },
 
   number:{
-    type:Number
-  },
-  organisation:{
-    type:String
-  },
-
-  percentage:{
-    type:String
-  },
-
-    pincode:{
-      type:String
-    },
-  
-  project_description:{
-    type:String
-  },
-  
-  project_duration:{
-    type:Number
-  },
-
-  project_fromdate:{
-    type:String
-  },
-
-  project_technology:{
-    type:String
-  },
-  
- 
-  project_title:{
-    type:String
-  },
-
-  project_todate:{   type:String},
- 
-  skills:{
-    type:Array
-  }
-  ,
-  social:{
-    type:Array
-  },
-
-  state:{
-    type:String
+    type:Number,
+    required:true
   },
   summary:{
-    type:String
+    type: String,
+    required: true
   },
-  team_size:{
-    type:Number
+  lastname: {
+    type: String,
+    required: true
   },
-  university:{
-    type:String
+  pincode: {
+    type: String,
+    required: true
   },
-  
-  work_technology:{
-    type:String
-  }
-  ,
-created_at:{
-  type:Date,
-  default:Date.now
-}
-
-})
-module.exports = mongoose.model("Cv",CvSchema)
+ skills: {
+    type: Array,
+    required: true
+  },
+  social: {
+    type: Array,
+    required: true
+  },
+  education: {
+    type: Array,
+    required: true
+  },
+  experience: {
+    type: Array,
+    required: true
+  },
+  project: {
+    type: Array,
+    required: true
+  },
+  state: {
+    type: String,
+    required: true
+  },
+  created_at: {
+    type: Date,
+    default: Date.now
+  },
+});
+module.exports = mongoose.model("Cv", CvSchema);
